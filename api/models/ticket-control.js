@@ -29,7 +29,6 @@ class TicketControl {
 
   init() {
     const { last, today, tickets, lastFour } = require("../../db/data.json");
-    console.log(last, today, tickets, lastFour);
     if (today === this.today) {
       this.tickets = tickets;
       this.last = last;
