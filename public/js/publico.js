@@ -10,6 +10,8 @@ const lblTicket4 = document.querySelector("#lblTicket4");
 const lblEscritorio4 = document.querySelector("#lblEscritorio4");
 
 socket.on("last-four", (last) => {
+  const audio = new Audio("./audio/new-ticket.mp3");
+  audio.play();
   const [ticket1, ticket2, ticket3, ticket4] = last;
   if (ticket1) {
     lblTicket1.innerText = `Ticket ${ticket1.number}`;
